@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="data:image/png;base64,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"
+            alt="" width="30" height="24" background-color="black" class="d-inline-block align-text-top">
+          Ajay's Website
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#signup-form">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#login-form">Login</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+    <img src="https://cdn.pixabay.com/photo/2016/10/15/13/40/laptop-1742462__340.jpg" alt="header image" width="100%">
+    <!-- Sign Up  -->
+    <div class="container">
+      <form class="row g-3  registration-form" id="signup-form">
+        <h1 class="display-4 sign-up-title">Sign Up</h1>
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="validationCustom01" value="first name" required
+            autocomplete="off">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" value="last name" required autocomplete="off">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustomUsername" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+              required autocomplete="off">
+            <div class="invalid-feedback">
+              Please choose a Email.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Phone Number</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">+91</span>
+            <input type="text" class="form-control" id="validationCustom03" required autocomplete="off">
+            <div class="invalid-feedback">
+              Please enter a valid number
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Password</label>
+          <input type="password" class="form-control" id="validationCustom03" required autocomplete="off">
+          <div class="invalid-feedback">
+            Please enter a valid Password
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="validationCustom03" required autocomplete="off">
+          <div class="invalid-feedback">
+            Please enter a valid Password
+          </div>
+        </div>
+        <!-- <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+        </div> -->
+        <!-- <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div> -->
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 button-wrapper">
+          <button class="btn btn-dark" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+    <!-- Login -->
+    <form class="login-form" id="login-form">
+      <h1 class="display-4 login-title">Login</h1>
+      <div class="mb-3">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <div class="button-wrapper">
+        <button type="submit" class="btn btn-dark">Login</button>
+      </div>
+    </form>
+    <img
+      src="https://static.wixstatic.com/media/94a51f_a4cdfbffa0794e6da89c96fb4c1edda5~mv2.jpg/v1/fill/w_940,h_348,al_c,q_90/94a51f_a4cdfbffa0794e6da89c96fb4c1edda5~mv2.jpg"
+      alt="footer image" width="100%" margin="10px">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
